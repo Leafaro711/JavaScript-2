@@ -5,22 +5,22 @@
 // F(n) = F(n-2) + F(n-1)
 // Написать функцию, которая будет считать n-ное число из ряда Фибоначчи. Использовать рекурсию
 
-function fib(n) {
+function fibo(n) {
   if (n < 0) {
-    return fib(n + 2) - fib(n + 1);
+    return fibo(n + 2) - fibo(n + 1);
   } else if (n <= 1) {
     return n;
   } else {
-    return fib(n - 1) + fib(n - 2);
+    return fibo(n - 1) + fibo(n - 2);
   }
 }
 
-let num = Math.floor(prompt("Please enter number:"));
+let num = Math.floor(prompt("Введите число в диапазоне [-30; 30]:"));
 while (true) {
-  if (isNaN(num) || num > 40 || num < -40) {
+  if (isNaN(num) || num > 30 || num < -30) {
     num = Math.floor(
       prompt(
-        "You entered string or wrong number!\nThe number must be in the range [-40; 40]\nPlease try again:"
+        "Ошибка!\nЧисло должно быть в диапазоне [-30; 30]"
       )
     );
   } else {
@@ -28,4 +28,5 @@ while (true) {
   }
 }
 
-console.log(fib(num));
+console.log(fibo(num));
+alert(`Число Фибоноччи: ${fibo(num)}`);

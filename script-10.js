@@ -6,16 +6,16 @@ function diapazone(start, end) {
   let arrayLength = end - start;
   if (start < end) {
     for (let i = 0; i <= arrayLength; i++) {
-      array[i] = start + i;
+      array[i] = start++;
     }
     alert(`${array}`);
-    console.log(array);
   } else if (start > end) {
     for (let i = start; i >= end; i--) {
       array[i - 1] = i;
     }
     alert(`${array.reverse()}`);
   }
+  console.log(array);
 }
-
-diapazone(4, 20);
+alert('Введите два числа, чтобы получить массив из чисел в этом диапазоне:');
+diapazone(prompt("Start"), prompt("End"));

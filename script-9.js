@@ -8,7 +8,7 @@ function arrayOfMultiples(num, length) {
     }
     return arr;
 }
-
-console.log(arrayOfMultiples(7, 5));
-console.log(arrayOfMultiples(12, 10));
-console.log(arrayOfMultiples(17, 6));
+var num = prompt("Введите число:");
+var length = prompt("Введите длину:");
+console.log(`Mассив множителей числа: [${arrayOfMultiples(num, length)}]`);
+alert(`Mассив множителей числа: [${arrayOfMultiples(num, length)}]`);

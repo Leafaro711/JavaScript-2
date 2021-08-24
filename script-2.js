@@ -124,14 +124,14 @@ function numToString(n) {
 
     if (count === 3)
       return (
-        string100.charAt(0).toUpperCase() +
+        string100.charAt(0) +
         string100.slice(1) +
         string10 +
         string
       );
     else if (count === 2)
-      return string10.charAt(0).toUpperCase() + string10.slice(1) + string;
-    else return string.charAt(0).toUpperCase() + string.slice(1);
+      return string10.charAt(0) + string10.slice(1) + string;
+    else return string.charAt(0) + string.slice(1);
   }
 }
 

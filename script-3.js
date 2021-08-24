@@ -8,11 +8,11 @@ let cpu = words[Math.floor(Math.random() * words.length)];
 
 function rps(player) {
     if (player === words[0] || player === words[0].toUpperCase() || player === words[0].toLowerCase() && cpu === words[0]) {
-        return `Player and CPU both selected ${words[0]}. Friendship won`;
+        return `Player and CPU both selected ${words[0]}. Draw`;
     } else if (player === words[1] || player === words[1].toUpperCase() || player === words[1].toLowerCase() && cpu === words[1]) {
-        return `Player and CPU both selected ${words[1]}. Friendship won`;
+        return `Player and CPU both selected ${words[1]}. Draw`;
     } else if (player === words[2] || player === words[2].toUpperCase() || player === words[2].toLowerCase() && cpu === words[2]) {
-        return `Player and CPU both selected ${words[2]}. Friendship won`;
+        return `Player and CPU both selected ${words[2]}. Draw`;
     } else if (player === words[0] || player === words[0].toUpperCase() || player === words[0].toLowerCase() && cpu === words[1]) {
         return `Player selected ${words[0]}. CPU selected ${words[1]}. CPU won`;
     } else if (player === words[1] || player === words[1].toUpperCase() || player === words[1].toLowerCase() && cpu === words[2]) {
@@ -26,7 +26,7 @@ function rps(player) {
     } else if (player === words[0] || player === words[0].toUpperCase() || player === words[0].toLowerCase() && cpu === words[2]) {
         return `Player selected ${words[0]}. CPU selected ${words[2]}. Player won`;
     } else {
-        return rps(prompt(`You entered incorrect word! Please try again:\n${words[0]}, ${words[1]} or ${words[2]}`));
+        return rps(prompt(`Incorrect word! Try again:\n${words[0]}, ${words[1]} or ${words[2]}`));
     }
 }
 
